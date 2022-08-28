@@ -1,5 +1,14 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(i=0; i< array.length; i++){
+    let compliment = target - array[i];
+    for(let k = i+1; k<array.length; k++){
+      if(array[k] === compliment){
+        return true;
+      } 
+    }
+  }
+  return false;
 }
 
 /* 
@@ -8,8 +17,7 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
-*/
-
+//array[i] sum array[k] is equal to target number
 /*
   Add written explanation of your solution here
 */
